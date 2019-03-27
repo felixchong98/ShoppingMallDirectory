@@ -33,17 +33,18 @@ body {
 </style>
 </head>
 <body>
-<table width="100%">
+<table width="100%"  class="topnav">
   <tr>
-    <td><img src="public/image/umall.png" alt="UMall"></td>
+    <td><img src="{{URL::asset('/image/umall.png')}}" alt="UMall-logo", height="90" width="90"></td>
     <td>
-      <div class="topnav">
+      <div>
       <a class="nav" onclick="openPage(event, 'Home')" href="home">Home</a>
       <a class="nav" onclick="openPage(event, 'Shop')" href="#Shop">Shops</a>
       <a class="nav" onclick="openPage(event, 'Contact')" href="#contact">Contact Us</a>
       <a class="nav" onclick="openPage(event, 'About')" href="about">About</a>
       </div>
     </td>
+  <tr>
 </table>
 
 <!-- change class name to active so that the background color will change-->

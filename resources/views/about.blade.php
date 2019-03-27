@@ -1,40 +1,23 @@
 <html>
 <head>
-<style>
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
-}
-
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-</style>
 
 <title>About Page</title>
 @include('navigation')
+<style>
+#location:hover {
+  border: 1px solid #777;
+}
+</style>
 </head>
 
 <body>
   <p></p>
-  <p><img src="public/image/bannercampus.jpg" alt="banner"></p>
+  <p><img src="{{URL::asset('/image/bannercampus.jpg')}}" alt="UMall-logo", width="100%"></p>
   <p></p>
-  <p><table width="80%">
+  <p><table width="80%" align="center">
     <tr>
       <td><h3>Overview</h3></td>
-      <td rowspan=2><img src="public/image/UTAR.jpg" alt="UTAR"></td>
+      <td rowspan=2><img src="{{URL::asset('/image/UTAR.jpg')}}" alt="UTAR", height="400" width="400"></td>
     </tr>
     <tr>
       <td>Enter its grand gateway into a maze of experiences. This is a shopper’s paradise,
@@ -57,31 +40,16 @@ div.desc {
 
   <br><br><br><br>
 
-  <table width="80%">
+  <table width="80%" align="center">
     <tr>
       <td>
-        <div class="gallery">
-          <a target="_blank" href="mainentrance.jpg">
-            <img src="public/image/mainentrance.jpg" alt="main entrance" width="600" height="400">
-          </a>
-          <div class="desc">Main Entrance</div>
-        </div>
+        <img src="{{URL::asset('/image/mainentrance.jpg')}}" alt="main entrance", width="400" height="500">
       </td>
       <td>
-        <div class="gallery">
-          <a target="_blank" href="waterfountain.jpg">
-            <img src="public/image/waterfountain.jpg" alt="water fountain" width="600" height="400">
-          </a>
-          <div class="desc">Water Fountain in front of UMall</div>
-        </div>
+        <img src="{{URL::asset('/image/waterfountain.jpg')}}" alt="water fountain", width="400" height="500">
       </td>
       <td>
-        <div class="gallery">
-          <a target="_blank" href="mall.jpg">
-            <img src="public/image/mall.jpg" alt="mall" width="600" height="400">
-          </a>
-          <div class="desc">Inside UMall</div>
-        </div>
+        <img src="{{URL::asset('/image/mall.jpg')}}" alt="mall", width="400" height="500">
       </td>
     </tr>
     <tr>
@@ -89,7 +57,7 @@ div.desc {
     <tr>
       <td colspan=3 style="text-align:center">
         <a href="https://www.google.com/maps/place/UTAR+Sungai+Long+Campus/@3.0401922,101.7944586,15z/data=!4m5!3m4!1s0x0:0x78796ffc32ce3fcd!8m2!3d3.0401922!4d101.7944586">
-          <img src="public/image/location.jpg" alt="location" width="600" height="400">
+          <img src="{{URL::asset('/image/location.png')}}" alt="location" width="50%" height="90%" id="location">
         </a>
       </td>
     </tr>
