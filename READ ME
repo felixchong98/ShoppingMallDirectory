@@ -1,3 +1,14 @@
+To configure git in atom: 
+ref link: https://www.youtube.com/watch?v=duQwcAEV4hk
+1. go to .git/refs/config.php
+2. add these on top: 
+   [remote "origin"]
+	   url = "https://github.com/felixchong98/ShoppingMallDirectory.git"
+
+   [branch "master"]
+	   remote= origin
+
+
 to include navigatio and footer:
 @include('navigation')
 @include('footer')
