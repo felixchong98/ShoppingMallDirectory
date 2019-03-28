@@ -26,3 +26,6 @@ Route::get('home', 'ViewController@home')
 
 Route::get('about', 'ViewController@about')
   ->name('views.about');
+
+Route::get('contact', 'ViewController@contact')
+  ->name('views.contact');
