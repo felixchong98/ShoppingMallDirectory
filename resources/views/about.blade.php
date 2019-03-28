@@ -5,7 +5,7 @@
 @include('navigation')
 <style>
 #location:hover {
-  border: 1px solid #777;
+  border: 3px solid #777;
 }
 </style>
 </head>

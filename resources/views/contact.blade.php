@@ -1,7 +1,7 @@
 <html>
 <head>
   <title>Contact Us</title>
-    <?php include('navigation.blade.php'); ?>
+    @include('navigation')
 
     <style>
       body{
@@ -45,7 +45,7 @@
         type="text" name="email" placeholder="Email*"></td>
     </tr>
     <tr>
-      <td><input style="font-family: Bahnschrift; font-size:12pt; width:350px; height:35px;" size="40" 
+      <td><input style="font-family: Bahnschrift; font-size:12pt; width:350px; height:35px;" size="40"
         type="text" name="contactNo" placeholder="Contact Number"></td>
     </tr>
     <tr>
@@ -59,5 +59,6 @@
   </table>
 
   </form>
+  @include('footer')
 </body>
 </html>
