@@ -74,6 +74,8 @@ use App\Common;
                 'id' => $shop->id,
                 ]
               ) !!}
+              |
+              <a href="{{ route('shop.delete', $shop->id) }}">Delete</a>
             </div>
           </td>
         </tr>

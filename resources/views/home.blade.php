@@ -1,13 +1,25 @@
-<html>
-<head>
-  <title>Home Page</title>
-  @include('navigation')
-</head>
-<body>
-  <h1 style="text-align: center"><b>Welcome to UMall</b></h1>
-  <br><br>
-  <p style="text-align: center"><img src="{{URL::asset('/image/umall.png')}}" alt="UMall-logo", height="500" width="500"></p>
-  <br><br>
-  @include('footer')
-</body>
-</html>
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Dashboard</div>
+
+                <div class="panel-body">
+                    @if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    You are logged in!
+                    <br><br>
+                    <a href="{{ url('/shop') }}">Going to Back-end</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
