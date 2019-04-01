@@ -6,12 +6,14 @@ use App\Common;
 <head>@include('navigation')</head>
 
 <body>
+  <div class="contactIntro">
   <p><h2>CUSTOMER CARE / FEEDBACK</h2></p>
   <br>
   <p><h3>GET IN TOUCH WITH US</h3></p>
   <p>Every suggestion & feedback matters to us. Share your experience
   <br>and help us to improve so we can serve you better.</p>
   <br>
+  </div>
 
 <!-- Bootstrap Boilerplate... -->
 
@@ -35,6 +37,7 @@ use App\Common;
   ]) !!}
 </div>
 </div>
+<br>
 
 <!-- salutation -->
 <div class="form-group row">
@@ -48,6 +51,7 @@ use App\Common;
   ]) !!}
 </div>
 </div>
+<br>
 
 <!-- fullName -->
 <div class="form-group row">
@@ -62,6 +66,7 @@ use App\Common;
     ]) !!}
 </div>
 </div>
+<br>
 
 <!-- email -->
 <div class="form-group row">
@@ -76,6 +81,7 @@ use App\Common;
   ]) !!}
 </div>
 </div>
+<br>
 
 <!-- contactNo -->
 <div class="form-group row">
@@ -90,7 +96,6 @@ use App\Common;
   ]) !!}
 </div>
 </div>
-
 <br>
 
 <!-- feedback -->

@@ -1,0 +1,65 @@
+#navBody{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  width: 100%;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #e65c00;
+  color: white;
+}
+
+#pageFooter{
+	font-size: 1.0em;
+	margin: 0px;
+	padding: 18px;
+  background-color: #333;
+  color: #f2f2f2;
+	border-top: 1px dotted black;
+}
+
+.homeHeader{
+  text-align: center;
+  font-family: Comic Sans MS;
+  font-size: 50px;
+}
+
+.contactIntro{
+  margin-left: 30px;
+}
+
+.panel-body{
+  margin-left: 50px;
+}
+
+#banner{
+  margin: 0;
+  width: 100%;
+}
+
+#aboutTable{
+  width: 80%;
+}
+
+#aboutLocation:hover{
+  border: 3px solid #777;
+}

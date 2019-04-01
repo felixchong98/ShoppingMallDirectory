@@ -3,25 +3,21 @@
 
 <title>About Page</title>
 @include('navigation')
-<style>
-#location:hover {
-  border: 3px solid #777;
-}
-</style>
+<link rel = "stylesheet" href = "{{URL::asset('css/style.css')}}" />
 </head>
 
 <body>
-  <p></p>
-  <p><img src="{{URL::asset('/image/bannercampus.jpg')}}" alt="UMall-logo", width="100%"></p>
-  <p></p>
-  <p><table width="80%" align="center">
+
+  <img src="{{URL::asset('/image/bannercampus.jpg')}}" alt="UMall-logo", id="banner">
+  <br></br>
+  <p><table id="aboutTable" align="center">
     <tr>
       <td><h3>Overview</h3></td>
       <td rowspan=2><img src="{{URL::asset('/image/UTAR.jpg')}}" alt="UTAR", height="400" width="400"></td>
     </tr>
     <tr>
-      <td>Enter its grand gateway into a maze of experiences. This is a shopper’s paradise,
-        <br>fashionista’s haven, kid’s wonderland, gourmet hunter’s sanctuary and a firm family
+      <td>Enter its grand gateway into a maze of experiences. This is a shopper抯 paradise,
+        <br>fashionista抯 heaven, kid抯 wonderland, gourmet hunter抯 sanctuary and a firm family
         <br>favourite, all under one roof.<br>
         <br>UTAR Megamall is home to a myriad of retail experiences unlike any other, ranging from
         <br>a dazzling array of fashion and lifestyle innovations to home furnishings, cosmetics and
@@ -40,7 +36,7 @@
 
   <br><br><br><br>
 
-  <table width="80%" align="center">
+  <table id = "aboutTable" align="center">
     <tr>
       <td>
         <img src="{{URL::asset('/image/mainentrance.jpg')}}" alt="main entrance", width="400" height="500">
@@ -52,16 +48,21 @@
         <img src="{{URL::asset('/image/mall.jpg')}}" alt="mall", width="400" height="500">
       </td>
     </tr>
+
     <tr>
     </tr>
+
     <tr>
       <td colspan=3 style="text-align:center">
+        <br>
+        <h4>View our location: </h4>
         <a href="https://www.google.com/maps/place/UTAR+Sungai+Long+Campus/@3.0401922,101.7944586,15z/data=!4m5!3m4!1s0x0:0x78796ffc32ce3fcd!8m2!3d3.0401922!4d101.7944586">
-          <img src="{{URL::asset('/image/location.png')}}" alt="location" width="50%" height="90%" id="location">
+          <img src="{{URL::asset('/image/location.png')}}" alt="location" width="50%" height="90%" id="aboutLocation">
         </a>
       </td>
     </tr>
   </table>
+  <br>
   @include('footer')
 </body>
 
