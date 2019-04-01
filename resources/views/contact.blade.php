@@ -1,3 +1,4 @@
+
 <html>
 <head>
   <title>Contact Us</title>
@@ -38,7 +39,7 @@
     </tr>
     <tr>
       <td><input style="font-family: Bahnschrift; font-size:12pt; width:350px; height:35px;"
-        type="text" type="fullname" placeholder="Full Name*"></td>
+        type="text" name="fullname" placeholder="Full Name*"></td>
     </tr>
     <tr>
       <td><input style="font-family: Bahnschrift; font-size:12pt; width:350px; height:35px;" size="40"
@@ -50,7 +51,7 @@
     </tr>
     <tr>
       <td><br><textarea style="font-family: Bahnschrift; font-size:12pt;" rows="12" cols="40"
-        type="textarea" name="contactNo" placeholder="Feedback"></textarea></td>
+        type="textarea" name="feedback" placeholder="Feedback"></textarea></td>
     </tr>
     <tr>
       <td><br><input style="font-family: Bahnschrift; font-size:12pt; width:80px; height:25px;"
