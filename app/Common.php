@@ -29,5 +29,11 @@ class Common
          'Leisure & Entertainment' => 'Leisure & Entertainment',
          'Department Store & Supermarket' => 'Department Store & Supermarket',
        ];
+
+       public static $salutation = [
+         'Mr.' => 'Mr.',
+         'Mrs.' => 'Mrs.',
+         'Ms.' => 'Ms.',
+       ];
  }
  ?>
