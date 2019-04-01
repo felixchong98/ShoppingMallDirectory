@@ -1,39 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #e65c00;
-  color: white;
-}
-</style>
+<link rel = "stylesheet" href = "{{URL::asset('css/style.css')}}" />
 </head>
-<body>
-<table width="100%"  class="topnav">
+<body id="navBody">
+<table class="topnav">
   <tr>
     <td><img src="{{URL::asset('/image/umall.png')}}" alt="UMall-logo", height="90" width="90"></td>
     <td>
