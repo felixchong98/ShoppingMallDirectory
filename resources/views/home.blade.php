@@ -16,7 +16,9 @@
 
                     You are logged in!
                     <br><br>
-                    <a href="{{ url('/shop') }}">Going to Back-end</a>
+                    <a href="{{ url('/shop') }}">- View Shops</a>
+                    <br>
+                    <a href="{{ url('/contact_us/index') }}">- View Customer Feedback</a>
                 </div>
             </div>
         </div>
