@@ -71,4 +71,11 @@ class ShopController extends Controller
 
           return redirect()->route('shop.index');
         }
+
+        public function destroy($id)
+        {
+          $division = Shop::find($id);
+          $division->delete();
+          return redirect()->route('shop.index');
+        }
 }
