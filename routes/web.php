@@ -15,10 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('navigation', 'ViewController@navigation')
-  ->name('views.navigation');
-Route::get('footer', 'ViewController@footer')
-  ->name('views.footer');
 Route::get('welcome', 'ViewController@welcome')
   ->name('views.welcome');
 Route::get('about', 'ViewController@about')

@@ -119,5 +119,6 @@ use App\Common;
 {!! Form::close() !!}
 </div>
 
+@include('footer')
 </body>
 </html>
