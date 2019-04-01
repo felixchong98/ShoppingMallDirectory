@@ -28,14 +28,13 @@ Route::get('about', 'ViewController@about')
 //  ->name('views.contact');
 
 //route contact_usController
-Route::get('/contact_us/create', 'contact_usController@create')
-  ->name('contact_us.create');
-Route::post('/contact_us', 'contact_usController@store')
+Route::get('/contact_us', 'contact_usController@create')
+  ->name('contact_us');
+Route::post('/contact_us/index', 'contact_usController@store')
   ->name('contact_us.store');
-Route::get('/contact_us', 'contact_usController@index')
+Route::get('/contact_us/index', 'contact_usController@index')
   ->name('contact_us.index');
-Route::get('/contact_us/{id}', 'contact_usController@show')
-  ->name('contact_us.show');
+
 // routes shopcontoller
 Route::get('/shop/create', 'ShopController@create')
   ->name('shop.create');
