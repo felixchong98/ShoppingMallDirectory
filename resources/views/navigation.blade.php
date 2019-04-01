@@ -40,7 +40,7 @@ body {
       <div>
       <a class="nav" onclick="openPage(event, 'Home')" href="welcome">Home</a>
       <a class="nav" onclick="openPage(event, 'Shop')" href="#Shop">Shops</a>
-      <a class="nav" onclick="openPage(event, 'Contact')" href="contact_us/create">Contact Us</a>
+      <a class="nav" onclick="openPage(event, 'Contact')" href="contact_us">Contact Us</a>
       <a class="nav" onclick="openPage(event, 'About')" href="about">About</a>
       </div>
     </td>

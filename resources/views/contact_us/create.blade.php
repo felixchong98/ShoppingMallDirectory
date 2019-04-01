@@ -1,16 +1,18 @@
 <?php
 use App\Common;
 ?>
-@extends('layouts.app')
+<html>
 
-@section('content')
+<head>@include('navigation')</head>
 
+<body>
   <p><h2>CUSTOMER CARE / FEEDBACK</h2></p>
   <br>
   <p><h3>GET IN TOUCH WITH US</h3></p>
   <p>Every suggestion & feedback matters to us. Share your experience
   <br>and help us to improve so we can serve you better.</p>
   <br>
+
 <!-- Bootstrap Boilerplate... -->
 
 <div class="panel-body">
@@ -116,4 +118,6 @@ use App\Common;
 
 {!! Form::close() !!}
 </div>
-@endsection
+
+</body>
+</html>

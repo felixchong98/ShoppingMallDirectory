@@ -30,7 +30,7 @@ class Contact_usController extends Controller
 		$contact_us->fill($request->all());
 		$contact_us->save();
 
-		return redirect()->route('contact_us.create');
+		return redirect()->route('contact_us');
 
 	}
 
@@ -42,14 +42,4 @@ class Contact_usController extends Controller
 			'contact_us' => $contact_us
 		]);
 	 }
-
-	 public function show($id)
-		{
-				$contact_us = Contact_us::find($id);
-				if(!$contact_us) throw new ModelNotFoundException;
-
-				 return view('contact_us.show', [
-				 'contact_us' => $contact_us
-				 ]);
-		 }
 }
