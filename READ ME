@@ -1,0 +1,28 @@
+To configure git in atom: 
+ref link: https://www.youtube.com/watch?v=duQwcAEV4hk
+1. go to .git/refs/config.php
+2. add these on top: 
+   [remote "origin"]
+	   url = "https://github.com/felixchong98/ShoppingMallDirectory.git"
+
+   [branch "master"]
+	   remote= origin
+
+
+to include navigatio and footer:
+@include('navigation')
+@include('footer')
+
+NOT <?php include('navigation') ?>
+
+to display the page successfully:
+1. Go to app/Http/ViewController.php to add this function:
+   
+   public function <pagename>()         // without ".php"
+   {
+     return view('<pagename>');
+   }
+2. Go to routes/web.php to add this function:
+
+   Route::get('<pagename>', 'ViewController@<pagname>')
+    ->name('views.<pagename>');
