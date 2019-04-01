@@ -30,7 +30,7 @@ class Contact_usController extends Controller
 		$contact_us->fill($request->all());
 		$contact_us->save();
 
-		return redirect()->route('contact_us.index');
+		return redirect()->route('contact_us.create');
 
 	}
 
