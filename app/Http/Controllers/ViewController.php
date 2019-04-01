@@ -20,9 +20,9 @@ class ViewController extends Controller
       return view('footer');
     }
 
-    public function home()
+    public function welcome()
     {
-      return view('home');
+      return view('welcome');
     }
 
     public function about()

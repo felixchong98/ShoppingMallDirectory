@@ -19,8 +19,8 @@ Route::get('navigation', 'ViewController@navigation')
   ->name('views.navigation');
 Route::get('footer', 'ViewController@footer')
   ->name('views.footer');
-Route::get('home', 'ViewController@home')
-  ->name('views.home');
+Route::get('welcome', 'ViewController@welcome')
+  ->name('views.welcome');
 Route::get('about', 'ViewController@about')
   ->name('views.about');
 Route::get('contact', 'ViewController@contact')
@@ -39,3 +39,13 @@ Route::get('/shop/{id}/edit', 'ShopController@edit')
   ->name('shop.edit');
 Route::put('/shop/{id}', 'ShopController@update')
   ->name('shop.update');
+Route::get('shop/delete/{division}',['as' => 'shop.delete', 'uses' => 'ShopController@destroy']);
+
+//auth
+Auth::routes();
+Route::get('/home', 'HomeController@index')
+  ->name('home');
+Route::get('/contacts', 'ContactController@index')
+  ->name('contacts.index');
+Route::post('/contacts/store', 'ContactController@store')
+  ->name('contacts.store');
