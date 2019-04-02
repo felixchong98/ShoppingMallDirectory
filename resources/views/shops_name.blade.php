@@ -4,39 +4,7 @@
       @include('navigation')
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <style>
-  .split {
- height: 100%;
- width: 30%;
- position: fixed;
- z-index: 1;
- top: 98;
-}
-
-.left {
-  padding-left: 10;
-  left: 0;
-  background-color: grey;
-  overflow: scroll;
-}
-
-.right {
-  right:0;
-  height:100%;
-  width:68%;
-  overflow: scroll;
-}
-
-.leftPart {
-  color: white;
-  position: absolute;
-  left: 3%;
-}
-
-.rightPart{
-  position: right;
-}
-  </style>
+  <link rel = "stylesheet" href = "{{URL::asset('css/style.css')}}" />
 
 </head>
 <body>
