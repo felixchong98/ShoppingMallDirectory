@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 01, 2019 at 11:27 AM
+-- Generation Time: Apr 02, 2019 at 07:24 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.3.1
 
@@ -25,18 +25,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contacts`
+-- Table structure for table `contact_us`
 --
 
-DROP TABLE IF EXISTS `contacts`;
-CREATE TABLE IF NOT EXISTS `contacts` (
+DROP TABLE IF EXISTS `contact_us`;
+CREATE TABLE IF NOT EXISTS `contact_us` (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `phone` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `subject` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `salutation` char(5) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fullName` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `contactNo` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `feedback` text COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `contact_us_subject_index` (`subject`),
+  KEY `contact_us_salutation_index` (`salutation`),
+  KEY `contact_us_fullname_index` (`fullName`),
+  KEY `contact_us_email_index` (`email`),
+  KEY `contact_us_contactno_index` (`contactNo`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -51,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `migrations` (
   `migration` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `migrations`
@@ -60,7 +68,8 @@ CREATE TABLE IF NOT EXISTS `migrations` (
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (1, '2014_10_12_000000_create_users_table', 1),
 (2, '2014_10_12_100000_create_password_resets_table', 1),
-(3, '2019_03_30_143813_create_mall_directories_table', 1);
+(3, '2019_03_30_174759_create_shops_table', 1),
+(4, '2019_03_31_115752_create_contact_us_table', 1);
 
 -- --------------------------------------------------------
 
@@ -94,13 +103,14 @@ CREATE TABLE IF NOT EXISTS `shops` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `tenant_name_index` (`name`),
-  KEY `tenant_category_index` (`category`),
-  KEY `tenant_floor_index` (`floor`),
-  KEY `tenant_zone_index` (`zone`),
-  KEY `tenant_code_index` (`code`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=531 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  KEY `shops_code_index` (`code`),
+  KEY `shops_name_index` (`name`),
+  KEY `shops_category_index` (`category`),
+  KEY `shops_floor_index` (`floor`),
+  KEY `shops_zone_index` (`zone`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- --------------------------------------------------------
 --
 -- Dumping data for table `shops`
 --
@@ -637,7 +647,6 @@ INSERT INTO `shops` (`id`, `code`, `name`, `category`, `floor`, `zone`, `about`,
 (525, 'T-007A & TK-14 & 23', 'Zok Noodle House', 'Delicacy', '3', 'South', 'An authentic Hong Kong and Macau gourmet experience awaits you at Zok Noodle House! Choose from a variety of Cantonese dishes, from congee to roast meats and springy noodles in superior soup. Each dish has been carefully prepared with the freshest ingredients. Itâ€™s the perfect place for a meal with family and friends!', NULL, NULL);
 
 -- --------------------------------------------------------
-
 --
 -- Table structure for table `users`
 --
@@ -647,13 +656,17 @@ CREATE TABLE IF NOT EXISTS `users` (
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `username` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `activation_code` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '0',
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `users_email_unique` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  UNIQUE KEY `users_email_unique` (`email`),
+  UNIQUE KEY `users_username_unique` (`username`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
