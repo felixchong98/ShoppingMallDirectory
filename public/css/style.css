@@ -44,11 +44,13 @@
 }
 
 .contactIntro{
+  margin-top: 40px;
   margin-left: 30px;
 }
 
 .panel-body{
-  margin-left: 50px;
+  background-color: #f2f2f2;
+  padding: 50px;
 }
 
 #banner{
@@ -100,3 +102,35 @@
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.split {
+ height: 100%;
+ width: 30%;
+ position: fixed;
+ z-index: 1;
+ top: 98;
+}
+
+.left {
+  padding-left: 10;
+  left: 0;
+  background-color: grey;
+  overflow: scroll;
+}
+
+.right {
+  right:0;
+  height:100%;
+  width:68%;
+  overflow: scroll;
+}
+
+.leftPart {
+  color: white;
+  position: absolute;
+  left: 3%;
+}
+
+.rightPart{
+  position: right;
+}
