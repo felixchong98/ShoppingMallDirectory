@@ -10,7 +10,14 @@
     <td>
       <div>
       <a class="nav" onclick="openPage(event, 'Home')" href="welcome">Home</a>
-      <a class="nav" onclick="openPage(event, 'Shop')" href="#Shop">Shops</a>
+      <div class="dropdown">
+          <a>Shops</a>
+        <div class="dropdown-content">
+          <a class="nav" onclick="openPage(event, 'Categories')" href="shops_categories">Search by Categories</a>
+          <a class="nav" onclick="openPage(event, 'floor')" href="shops_floor">Search by Floor/Zone</a>
+          <a class="nav" onclick="openPage(event, 'name')" href="shops_name">Search by Name</a>
+        </div>
+      </div>
       <a class="nav" onclick="openPage(event, 'Contact')" href="contact_us">Contact Us</a>
       <a class="nav" onclick="openPage(event, 'About')" href="about">About</a>
       </div>

@@ -31,6 +31,15 @@ Route::post('/contact_us/index', 'contact_usController@store')
 Route::get('/contact_us/index', 'contact_usController@index')
   ->name('contact_us.index');
 
+Route::any('shops_categories', 'ViewController@shops_categories')
+  ->name('views.shops_categories');
+
+Route::any('shops_floor', 'ViewController@shops_floor')
+  ->name('views.shops_floor');
+
+Route::any('shops_name', 'ViewController@shops_name')
+  ->name('views.shops_name');
+
 // routes shopcontoller
 Route::get('/shop/create', 'ShopController@create')
   ->name('shop.create');
