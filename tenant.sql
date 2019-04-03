@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 02, 2019 at 07:24 PM
+-- Generation Time: Apr 03, 2019 at 06:04 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.3.1
 
@@ -17,6 +17,10 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
+
+CREATE DATABASE tenant;
+
+USE tenant;
 
 --
 -- Database: `tenant`
@@ -108,9 +112,8 @@ CREATE TABLE IF NOT EXISTS `shops` (
   KEY `shops_category_index` (`category`),
   KEY `shops_floor_index` (`floor`),
   KEY `shops_zone_index` (`zone`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=526 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- --------------------------------------------------------
 --
 -- Dumping data for table `shops`
 --
@@ -647,6 +650,7 @@ INSERT INTO `shops` (`id`, `code`, `name`, `category`, `floor`, `zone`, `about`,
 (525, 'T-007A & TK-14 & 23', 'Zok Noodle House', 'Delicacy', '3', 'South', 'An authentic Hong Kong and Macau gourmet experience awaits you at Zok Noodle House! Choose from a variety of Cantonese dishes, from congee to roast meats and springy noodles in superior soup. Each dish has been carefully prepared with the freshest ingredients. Itâ€™s the perfect place for a meal with family and friends!', NULL, NULL);
 
 -- --------------------------------------------------------
+
 --
 -- Table structure for table `users`
 --
@@ -666,7 +670,14 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`),
   UNIQUE KEY `users_username_unique` (`username`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `username`, `password`, `activation_code`, `status`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'UtarManagement', 'utar@email.com', 'utarmanagement', '$2y$10$0/Qxg18nC/u4RfhAbV5kwO1a/yL0535x8yZisE8phNaHgyP725N0C', NULL, 0, 'P4nbTuRGrRccLZuEg7dAUp9AWagpGzcs64hqDnSHHm8ZNOo9fOYVfHS8FcKU', '2019-04-02 21:33:34', '2019-04-02 21:33:34');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
