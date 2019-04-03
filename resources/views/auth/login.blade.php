@@ -10,21 +10,17 @@
           <div class="panel-body">
             <form class="form-horizontal" method="POST" action="{{ route('login') }}">
               {{ csrf_field() }}
-              @if(session()->has('login_error'))
-                <div class="alert alert-success">
-                  {{ session()->get('login_error') }}
-                </div>
-              @endif
-              <div class="form-group{{ $errors->has('identity') ? ' has-error' : '' }}">
-                <label for="identity" class="col-md-4 control-label">Username</label>
+
+              <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
+                <label for="username" class="col-md-4 control-label">Username</label>
 
                 <div class="col-md-6">
-                  <input id="identity" type="identity" class="form-control" name="identity"
-                         value="{{ old('identity') }}" autofocus>
+                  <input id="username" type="text" class="form-control" name="username"
+                         value="{{ old('username') }}" autofocus>
 
-                  @if ($errors->has('identity'))
+                  @if ($errors->has('username'))
                     <span class="help-block">
-                                        <strong>{{ $errors->first('identity') }}</strong>
+                                        <strong>{{ $errors->first('username') }}</strong>
                                     </span>
                   @endif
                 </div>
