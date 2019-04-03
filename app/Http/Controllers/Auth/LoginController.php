@@ -40,40 +40,7 @@ class LoginController extends Controller
      */
     public function username()
     {
-        $identity  = request()->get('identity');
-        $fieldName = filter_var($identity, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
-        request()->merge([$fieldName => $identity]);
-        return $fieldName;
+        return 'username';
     }
-    /**
-     * Validate the user login.
-     * @param Request $request
-     */
-    protected function validateLogin(Request $request)
-    {
-        $this->validate(
-            $request,
-            [
-                'identity' => 'required|string',
-                'password' => 'required|string',
-            ],
-            [
-                'identity.required' => 'Username is required',
-                'password.required' => 'Password is required',
-            ]
-        );
-    }
-    /**
-     * @param Request $request
-     * @throws ValidationException
-     */
-    protected function sendFailedLoginResponse(Request $request)
-    {
-        $request->session()->put('login_error', trans('auth.failed'));
-        throw ValidationException::withMessages(
-            [
-                'error' => [trans('auth.failed')],
-            ]
-        );
-    }
+
 }
